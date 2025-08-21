@@ -4,56 +4,116 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="20dp"
+    android:background="#F5F7FA"
     tools:context=".MainActivity">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unit Converter"
+        android:textColor="#2A4B8D"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:textAllCaps="true" />
+
+    <!-- Input Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter value to convert:"
+        android:textColor="#555555"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/inputValue"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter value"
-        android:inputType="numberDecimal" />
+        android:layout_height="60dp"
+        android:hint="0.00"
+        android:inputType="numberDecimal"
+        android:background="@android:drawable/editbox_background_normal"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp" />
 
+    <!-- Conversion Selection -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="30dp">
 
         <Spinner
             android:id="@+id/fromUnitSpinner"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="to"
             android:layout_gravity="center"
-            android:layout_margin="8dp"/>
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="→"
+            android:textColor="#2A4B8D"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/toUnitSpinner"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
 
     </LinearLayout>
 
+    <!-- Convert Button -->
     <Button
         android:id="@+id/convertButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Convert"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2A4B8D"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Result Section -->
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Convert" />
+        android:text="Result:"
+        android:textColor="#555555"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
 
     <TextView
         android:id="@+id/resultView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:textSize="24sp"
-        tools:text="Result" />
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#2A4B8D"
+        android:background="#DDE4F0"
+        android:padding="16dp"
+        tools:text="0.00" />
 
 </LinearLayout>
